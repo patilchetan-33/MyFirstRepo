@@ -16,8 +16,6 @@ public class TestHooks {
         final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
         scenario.attach(screenshot, "image/png", scenario.getName());
 
-
-
     }
 
     @After
