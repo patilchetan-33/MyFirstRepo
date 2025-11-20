@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Theme of the report: standard (white) or dark (black) -->
+        <theme>standard</theme>
+
+        <!-- Document title displayed in the browser tab -->
+        <documentTitle>Make My Trip Extent Report</documentTitle>
+
+        <!-- Name of the report displayed within the report itself -->
+        <reportName>Automation Test Report</reportName>
+
+        <!-- Encoding for the report -->
+        <encoding>UTF-8</encoding>
+
+        <!-- Protocol for loading stylesheets and scripts (e.g., HTTPS for Jenkins) -->
+        <protocol>HTTPS</protocol>
+
+        <offlineMode>true</offlineMode>
+
+        <thumbnailForBase64>true</thumbnailForBase64>
+
+        <dateFormat>yyyy-MM-dd</dateFormat>
+
+        <timeFormat>HH:mm:ss</timeFormat>
+
+         Path to custom CSS file (optional)
+         <styles>src/test/resources/custom.css</styles>
+
+         Path to custom JavaScript file (optional)
+         <scripts>src/test/resources/custom.js</scripts>
+    </configuration>
+</extentreports>
