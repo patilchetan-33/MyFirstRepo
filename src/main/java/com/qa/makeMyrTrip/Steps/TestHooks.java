@@ -10,13 +10,15 @@ import static com.qa.makeMyrTrip.util.GlobalVariables.driver;
 
 public class TestHooks {
 
-    @AfterStep
-    public void afterStep(Scenario scenario) {
 
-        final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-        scenario.attach(screenshot, "image/png", scenario.getName());
 
-    }
+//    @AfterStep
+//    public void afterStep(Scenario scenario) {
+//
+//        final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+//        scenario.attach(screenshot, "image/png", scenario.getName());
+//
+//    }
 
     @After
     public void afterScenario(Scenario scenario) {
