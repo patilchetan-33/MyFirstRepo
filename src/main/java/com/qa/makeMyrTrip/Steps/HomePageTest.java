@@ -5,8 +5,11 @@ import com.qa.makeMyrTrip.util.GetDriver;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
 
 import java.io.IOException;
+
+import static com.qa.makeMyrTrip.util.GlobalVariables.driver;
 
 public class HomePageTest {
 
@@ -26,4 +29,8 @@ public class HomePageTest {
     }
 
 
+    @Then("^User enter (.*) in the field$")
+    public void userEnterMobileNumInTheField(String MobileNum) {
+        driver.findElement(By.xpath("//input[@placeholder='Enter Mobile Number']")).sendKeys(MobileNum);
+    }
 }

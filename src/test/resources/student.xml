@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Users>
+                
+    
+    
+    <User email="john@demo.com" id="101" name="john" role="supervisor" status="partial active"/>
+                
+    
+    
+    <User email="abc@demo.com" id="202" name="mary" role="supervisor" status="Inactive"/>
+                
+    
+    
+    <User email="tgb@demo.com" id="303" name="perry" role="admin" status="active"/>
+                
+    
+    
+    <User email="cvb@demo.com" id="404" name="chery" role="Beta admin" status="Inactive"/>
+                
+    
+    
+    <Company>
+                                
+        
+        
+        <Department>
+                                                
+            
+            
+            <Employee id="500" role="QA manager"/>
+                                                
+            
+            
+            <Employee id="501" role="Sr manager"/>
+                                                
+            
+            
+            <Employee id="502" role="Jr manager"/>
+                                            
+        
+        
+        </Department>
+                            
+    
+    
+    </Company>
+            
+
+
+</Users>
