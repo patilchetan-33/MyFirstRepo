@@ -15,7 +15,7 @@ public class HomePage {
 
 
         Thread.sleep(2000);
-        WebElement InitialPopupCloseIcon = ExcelUtilities.getElementFromExcel1("xpath","InitialPopupCloseIcon");
+        WebElement InitialPopupCloseIcon = ExcelUtilities.getElementFromExcel("xpath","InitialPopupCloseIcon");
         Thread.sleep(2000);
         InitialPopupCloseIcon.click();
 

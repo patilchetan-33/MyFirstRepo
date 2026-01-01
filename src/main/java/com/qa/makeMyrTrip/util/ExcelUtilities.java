@@ -3,13 +3,18 @@ package com.qa.makeMyrTrip.util;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 
 import static com.qa.makeMyrTrip.util.GlobalVariables.driver;
 
 public class ExcelUtilities {
+
+    static WebDriverWait wait =new WebDriverWait(driver,60);
 
     public static String getLocatorValueFromExcelFile(String element) throws IOException {
 
@@ -35,22 +40,28 @@ public class ExcelUtilities {
         String obj = ExcelUtilities.getLocatorValueFromExcelFile(pageObject);
 
         if(locatorType.equals("xpath")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(obj)));
             element = driver.findElement(By.xpath(obj));
         }
         else if(locatorType.equals("id")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(obj)));
             element = driver.findElement(By.id(obj));
 
         }
         else if(locatorType.equals("name")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.name(obj)));
             element = driver.findElement(By.name(obj));
         }
         else if(locatorType.equals("class")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(obj)));
             element = driver.findElement(By.className(obj));
         }
         else if(locatorType.equals("linkText")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(obj)));
             element = driver.findElement(By.linkText(obj));
         }
         else if(locatorType.equals("tagName")){
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(obj)));
             element = driver.findElement(By.tagName(obj));
         }
         return element;
